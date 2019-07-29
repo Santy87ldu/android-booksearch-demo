@@ -24,4 +24,10 @@ dependencies {
     compile 'com.android.support:appcompat-v7:21.0.2'
     compile 'com.loopj.android:android-async-http:1.4.6'
     compile 'com.squareup.picasso:picasso:2.4.0'
+     def appCenterSdkVersion = '2.2.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+
+ 
+
 }
