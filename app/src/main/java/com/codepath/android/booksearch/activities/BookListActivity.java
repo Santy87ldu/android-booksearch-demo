@@ -24,7 +24,12 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
+import com.microsoft.appcenter.AppCenter;
+import com.microsoft.appcenter.analytics.Analytics;
+import com.microsoft.appcenter.crashes.Crashes;
 
 public class BookListActivity extends ActionBarActivity {
     public static final String BOOK_DETAIL_KEY = "book";
@@ -45,6 +50,11 @@ public class BookListActivity extends ActionBarActivity {
         lvBooks.setAdapter(bookAdapter);
         progress = (ProgressBar) findViewById(R.id.progress);
         setupBookSelectedListener();
+        
+        AppCenter.start(getApplication(), "a596eff1-9bbc-435e-9e63-08535c714862",
+                  Analytics.class, Crashes.class);
+AppCenter.start(getApplication(), "a596eff1-9bbc-435e-9e63-08535c714862",
+                  Analytics.class, Crashes.class);
     }
 
     public void setupBookSelectedListener() {
